@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      body {
+          background: rgba(151, 150, 150, .2);
+      }
+
+      div {
+          width: 95%;
+      }
+
+      .topC {
+          background: orange;
+          height: 300px;
+          width: 95%;
+          margin-bottom: 10px;
+      }
+
+      .banner {
+          background: plum;
+          height: 300px;
+          margin-bottom: 10px;
+      }
+
+      .main {
+          background: darkcyan;
+          height: 800px;
+      }
+
+      ul {
+          position: absolute;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          top: 360px;
+          right: 10px;
+          background: white;
+      }
+
+      li {
+          width: 40px;
+          height: 40px;
+          font-size: 14px;
+          text-align: center;
+          margin: 5px auto;
+          border-top: rgb(214, 210, 210) 1px solid;
+      }
+
+      .top {
+          display: none;
+      }
+  </style>
+</head>
+
+<body>
+<div class="topC">1</div>
+<div class="banner">2</div>
+<div class="main"></div>
+<ul>
+  <li>实惠热卖</li>
+  <li>淘宝特色</li>
+  <li>猜你喜欢</li>
+  <li class="top"><span>顶部</span></li>
+  <li>反馈</li>
+  <li>暴恐举报</li>
+</ul>
+
+<script>
+    var ul = document.querySelector('ul');
+    var topT = document.querySelector('.banner').offsetTop;
+    var ulT = ul.offsetTop;
+    var banT = ulT - topT;
+    var mainT = document.querySelector('.main').offsetTop;
+
+    document.addEventListener('scroll', function() {
+        // 获取页面卷去部分 用 window.pageYOffset
+        if (window.pageYOffset >= topT) {
+            ul.style.position = 'fixed';
+            ul.style.top = banT + 'px';
+        } else {
+            ul.style.position = 'absolute';
+            ul.style.top = ulT + 'px';
+        }
+        var top = document.querySelector('.top');
+        if (window.pageYOffset >= mainT) {
+            top.style.display = 'block';
+        } else {
+            top.style.display = 'none';
+        }
+        // console.log(window.pageYOffset);
+    })
+</script>
+</body>
+
+</html>

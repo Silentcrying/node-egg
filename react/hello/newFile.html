@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="react.development.js"></script>
+  <script src="react-dom.development.js"></script>
+  // 使用JSX语法时 需要引入babel
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+</body>
+<!--<script>-->
+<!--    // 使用React.createElement创建dom元素时 不需要引入babel-->
+<!--    // 使用JSX语法时 需要引入Babel 将JSX转为js格式文件-->
+<!--  const dom = document.getElementById('app');-->
+<!--  const e = React.createElement;-->
+
+<!--  ReactDOM.render(-->
+<!--      e(-->
+<!--          'h1',-->
+<!--          '',-->
+<!--          'hello world'-->
+<!--      ),-->
+<!--      dom-->
+<!--  )-->
+<!--</script>-->
+<script type="text/babel">
+    const dom = document.getElementById('app');
+    const e = React.createElement;
+
+    // ReactDOM.render(
+    //     e(
+    //         'h1',
+    //         '',
+    //         'hello world'
+    //     ),
+    //     dom
+    // )
+    ReactDOM.render(
+        <h1>hello</h1>,
+        dom
+    )
+</script>
+</html>

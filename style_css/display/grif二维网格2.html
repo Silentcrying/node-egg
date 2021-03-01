@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" rel="stylesheet">
+    #wrapper {
+        /*display: grid;*/
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        row-gap: 20px;  /* 行间距 */
+        column-gap: 10px; /* 列间距 */
+        list-style: none;
+        justify-content: center; /*整个内容区域水平居中*/
+        align-content: center; /*整个内容区域的垂直位置（上中下）*/
+        justify-items: center; /*属性设置单元格内容的水平位置（左中右）;*/
+        align-items: center; /*属性设置单元格内容的垂直位置（上中下)*/
+    }
+    li:nth-of-type(1) {
+        width: 100%;
+        height: 100%;
+        /*text-align: center;*/
+        background: red;
+        /*justify-items: center; !*属性设置单元格内容的水平位置（左中右）;*!*/
+        /*align-items: center; !*属性设置单元格内容的垂直位置（上中下)*!*/
+    }
+    li:nth-of-type(2) {
+        width: 100%;
+        height: 100%;
+        background: orange;
+        /*justify-items: center; !*属性设置单元格内容的水平位置（左中右）;*!*/
+        /*align-items: center; !*属性设置单元格内容的垂直位置（上中下)*!*/
+    }
+    li:nth-of-type(3) {
+        width: 100%;
+        height: 100%;
+        background: green;
+    }
+    li:nth-of-type(4) {
+        width: 100%;
+        height: 100%;
+        background: blue;
+    }
+    li:nth-of-type(5) {
+        width: 100%;
+        height: 100%;
+        background: #00b2ff;
+    }
+    li:nth-of-type(6) {
+        width: 100%;
+        height: 100%;
+        background: purple;
+    }
+    li:nth-of-type(7) {
+        width: 100%;
+        height: 100%;
+        background: lightblue;
+    }
+    li:nth-of-type(8) {
+        width: 100%;
+        height: 100%;
+        background: black;
+    }
+    /*grid-template-areas：网格布局允许指定"区域"（area），一个区域由单个或多个单元格组成。grid-template-areas属性用于定义区域。*/
+    #second {
+        box-shadow: 0 0 1px #f6f;
+        display: grid;
+        grid-template-areas: 'a b c' 'd e f' 'g h i';
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper">
+  <ul>
+    <li><a>红</a></li>
+    <li><a>橙</a></li>
+    <li><a>黄</a></li>
+    <li><a>绿</a></li>
+    <li><a>蓝</a></li>
+    <li><a>靛</a></li>
+    <li><a>紫</a></li>
+    <li><a>冰</a></li>
+    <li><a>黑</a></li>
+  </ul>
+  <div id="second">
+    <p>一</p>
+    <p>二</p>
+    <p>三</p>
+    <p>四</p>
+    <p>五</p>
+    <p>六</p>
+    <p>七</p>
+    <p>八</p>
+  </div>
+</div>
+</body>
+</html>

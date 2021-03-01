@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" rel="stylesheet">
+    /*fr是css为网格布局创建的新单位。fr使用户不用计算百分比就能创建灵活的网格；1fr表示空间的一等份*/
+    #wrapper {
+        display: grid;
+        /*grid-template-columns: 200px 200px 100px; !*定义三个宽度为100px的单元格 *!*/
+        /*grid-template-rows: 200px 200px 100px; !*用于定义网格中行的数量和大小*!*/
+        /*grid-template-columns: 3fr 4fr 3fr; !* 宽度分为3+4+3=10个等份，3个单元格分别占3、4、3份 *!*/
+        grid-template-columns: 3fr 4fr 3fr 4fr 6fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: column; /*grid-auto-flow 属性控制 网格单元 如何流入网格，其默认值为 row。网格中的“网格单元”将会被一一填充，直到没有剩余的项目为止。*/
+    }
+    /*repeat() 函数有助于使 网格轨道 列表变得不是那么多余，并为其添加了语义层。*/
+    #first {
+        width: 200px;
+        height: 400px;
+        display: grid;
+        background: blue;
+        grid-template-columns: repeat(3, 1fr 2fr); /* 重复3次的 1fr 2fr。 还可以是：grid-template-columns:2fr repeat(5，1fr) 4fr;*/
+    }
+    #second {
+        width: 200px;
+        height: 300px;
+        display: grid;
+        background: lightblue;
+        display: grid;
+        grid-template:
+        "header header  header" 80px
+        "nav    article article" 600px
+        / 100px 1fr;
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="first">蓝色</div>
+  <div id="second">冰蓝</div>
+</div>
+</body>
+</html>

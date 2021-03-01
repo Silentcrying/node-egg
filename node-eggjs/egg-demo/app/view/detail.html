@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/public/detail.css" />
+  </head>
+  <body>
+    <h1>详情页</h1>
+    <ul id="detail">
+      <li>标题： <%=data.title%></li>
+      <li>作者： <%data.author%></li>
+      <li>总结： <%=data.summary%></li>
+      <li>图片: <img src="<%=api+'data/attachment/'+data.pic%>" width="100px" height="100px" /></li>
+      <!-- ejs中解析html数据需要使用 %-%   -->
+      <li>内容： <%-data.content%></li>
+    </ul>
+  </body>
+</html>

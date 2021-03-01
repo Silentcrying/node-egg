@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>新闻列表</h1>
+    <div>
+      <p>当前页码</p>
+      <p>
+        <%for (var i = 0; i < 5; i++) {%>
+        <button class="newBtn"><%=i%></button>
+        <%}%>
+      </p>
+    </div>
+    <ul>
+      <%for(let i=0;i < list.length; i++){%>
+      <li><a href="/newsDetail?aid=<%=list[i].aid%>">新闻标题：<%=list[i].title%></a></li>
+      <%}%>
+    </ul>
+  </body>
+  <script>
+    const btn = document.querySelectorAll('.newBtn');
+    console.log(btn);
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].onclick = function () {
+        // 排他背景变色
+        for (let j = 0; j < btn.length; j++) {
+          btn[j].style.background = '';
+        }
+        btn[i].style.background = 'red';
+      };
+    }
+  </script>
+</html>

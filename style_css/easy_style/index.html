@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      #wrap {
+          display: flex;
+          width: 400px;
+          height: 400px;
+          position: relative;
+          top: 150px;
+          left: 40%;
+          justify-content: center;
+          align-items: center;
+      }
+      #cancel{
+          width: 202px;
+          height: 202px;
+          background: red;
+          border-radius: 50%;
+          color: white;
+          position: absolute;
+          animation: roaEyes 1s infinite;
+      }
+      ul {
+          display: flex;
+          list-style: none;
+          justify-content: space-around;
+          width: 114px;
+          margin-left: 2px;
+          margin-top: 72px;
+      }
+      .first,
+      .second,
+      .third {
+          width: 25px;
+          height: 25px;
+          background: black;
+          border-radius: 50%;
+      }
+      .first_s {
+          width: 10px;
+          height: 36px;
+          background: black;
+          display: inline-block;
+          position: relative;
+          border-radius: 50%;
+          top: 4px;
+          left: 1px;
+          transform: rotate(71deg);
+      }
+      .second_s {
+          width: 10px;
+          height: 36px;
+          background: black;
+          display: inline-block;
+          position: relative;
+          border-radius: 50%;
+          top: -18px;
+          left: 10px;
+          transform: rotate(151deg);
+      }
+      .third_s {
+          width: 10px;
+          height: 36px;
+          background: black;
+          display: inline-block;
+          position: relative;
+          border-radius: 50%;
+          top: -5px;
+          left: 19px;
+          transform: rotate(228deg);
+      }
+
+      .third {
+          margin-left: 86px;
+          margin-top: 24px;
+      }
+      #circleBlue {
+          width: 200px;
+          height: 200px;
+          margin: auto;
+          /*border: 10px solid #0b0b0b;*/
+          border-radius: 50%;
+          box-shadow: 0px 0px 55px 76px black;
+          animation: transStyle 4s infinite;
+      }
+      @keyframes transStyle {
+          25% {
+              width: 200px;
+              height: 200px;
+          }
+          50% {
+              width: 100px;
+              height: 100px;
+          }
+          75% {
+              width: 150px;
+              height: 150px;
+          }
+          100% {
+              width: 200px;
+              height: 200px;
+          }
+      }
+      @keyframes roaEyes {
+          10% {
+              transform: rotate(36deg);
+          }
+          20% {
+              transform: rotate(72deg);
+          }
+          30% {
+              transform: rotate(108deg);
+          }
+          40% {
+              transform: rotate(144deg);
+          }
+          50% {
+              transform: rotate(180deg);
+          }
+          60% {
+              transform: rotate(216deg);
+          }
+          70% {
+              transform: rotate(252deg);
+          }
+          80% {
+              transform: rotate(288deg);
+          }
+          90% {
+              transform: rotate(324deg);
+          }
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="circleBlue"></div>
+  <div id="cancel">
+    <div id="eyes">
+      <ul>
+        <li class="first">
+          <span class="first_s"></span>
+        </li>
+        <li class="second">
+          <span class="second_s"></span>
+        </li>
+      </ul>
+      <p class="third">
+        <span class="third_s"></span>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
